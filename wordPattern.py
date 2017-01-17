@@ -29,11 +29,9 @@ class Solution(object):
 		if lenp != lens:
 			return False
 
-		l = zip(lp, ls);
-
 		for i in range(lenp):
 			for j in range(i + 1, lenp, 1):
-				if (l[i][0] == l[j][0] and l[i][1] != l[j][1]) || (l[i][0] != l[j][0] and l[i][1] == l[j][1]):
+				if (lp[i] == lp[j] and ls[i] != ls[j]) || (lp[i] != lp[j] and ls[i] == ls[j]):
 					return False
 
 		return True
